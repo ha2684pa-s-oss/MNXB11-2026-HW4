@@ -8,4 +8,9 @@ int Foo::bar() {
 }
 
 
+float Foo::baz() {
+  x = 2.71;
+  return 3.14;
+
+}
 } // namespace homework
