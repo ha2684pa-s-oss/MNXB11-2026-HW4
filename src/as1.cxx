@@ -8,7 +8,13 @@ void AddOneRef(int &x) {
     x = x + 1;
     return; }
 
-bool isOdd(int x) { return false; }
+bool isOdd(int x) { 
+    x = abs(x);
+    if (x % 2 == 1)
+        return true;
+    else
+        return false;
+ }
 
 int floatToInt(float x) { return 0; }
 
