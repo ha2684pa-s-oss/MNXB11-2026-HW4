@@ -4,7 +4,8 @@ namespace homework {
 
 void printHello() { std::cout << "Hello, World!" << std::endl; }
 
-void AddOneRef(int &x) { return; }
+int AddOneRef(int &x) { 
+    return x + 1; }
 
 bool isOdd(int x) { return false; }
 
