@@ -11,6 +11,13 @@ int main() {
   // Example for as1.0
   homework::printHello();
 
+
+  // example for as1.4
+
+  int number = homework::factorial(3);
+  std::cout << number << std::endl;
+
+
   // Example for as2.1
   homework::Foo foo{};
   std::cout << foo.bar() << std::endl;
