@@ -16,7 +16,10 @@ bool isOdd(int x) {
         return false;
  }
 
-int floatToInt(float x) { return 0; }
+int floatToInt(float x) { 
+    int y = static_cast<int>(x);
+    x = y;
+    return x; }
 
 int factorial(int n) { return 0; }
 
