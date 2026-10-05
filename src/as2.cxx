@@ -4,7 +4,7 @@ namespace homework {
 
 // implement Foo methods here
 int Foo::bar() { 
-  return -1; 
+  return 42; 
 }
 
 
