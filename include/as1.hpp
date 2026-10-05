@@ -13,7 +13,7 @@ void printHello();
 // TO DO: implement the function "AddOneRef"'
 
 // changing to int so that we can return an int value. Void doesn't return anything...
-int AddOneRef(int &x);
+void AddOneRef(int &x);
 
 // As 1.2 (Function declarators) check if number is odd. Return true if odd, false if even
 // TO DO: implement the function "isOdd" here or in src/as1.cxx
