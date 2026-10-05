@@ -21,6 +21,17 @@ int floatToInt(float x) {
     x = y;
     return x; }
 
-int factorial(int n) { return 0; }
+int factorial(int n) {
+    if (n >= 0) {
+        int f = 1;
+        int i = 1;
+        while (i <= n) {
+            f *= i;
+            i++;
+        }
+        return f;
+    } else
+        return -1;
+}
 
 }; // namespace homework
