@@ -9,5 +9,10 @@
 int main() { 
   // Example for as1.0
   homework::printHello();
+
+  // Example for as1.1
+  int number = 2;
+  homework::AddOneRef(number);
+  std::cout << homework::AddOneRef(number) << std::endl;
 }
 
