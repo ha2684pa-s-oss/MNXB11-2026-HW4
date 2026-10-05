@@ -22,5 +22,14 @@ int main() {
   homework::Foo foo{};
   std::cout << foo.bar() << std::endl;
   
+
+
+  // Example for as2.1
+  std::cout << foo.baz() << std::endl;
+  std::cout << foo.x << std::endl;
+
+
+
 }
+
 
