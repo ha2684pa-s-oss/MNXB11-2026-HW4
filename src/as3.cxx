@@ -3,7 +3,10 @@
 namespace homework {
 
 
-Fruit::Fruit(Color color, const std::string& name) : color_(color), name_(name) {}
+Fruit::Fruit(const std::string& name, Color color) 
+    : name_(name), color_(color) {
+
+}
 
 
 // color getter
@@ -16,6 +19,17 @@ std::string Fruit::getName() const {
     return name_;
 }
 
+std::string Fruit::getTaste() const {
+    return "unknown";
+}
 
+Apple::Apple(Color color)
+    : Fruit("apple", color) {}
+
+
+std::string Apple::getTaste() const {
+    return "sweet";
+
+}
 } // namespace homework
 
