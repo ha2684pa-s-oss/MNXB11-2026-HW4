@@ -8,6 +8,8 @@ namespace homework {
 // TO DO: in src/as1.cxx, implement the method bar() of the struct Foo to return 42.
 // TO DO: in src/as1.cxx, implement the method baz() of the struct Foo to return 3.14 and set the member variable x to 2.71
 // TO DO: in src/as1.cxx, implement the method quux() of the struct Foo to return a vector of doubles {1.0, 2.0, 3.0}
+// COMMENT: Assuming you mean implementing methods in src/as2.cxx ...
+
 struct Foo {
   int bar();
   float baz();
@@ -26,6 +28,9 @@ class fVector2D {
 public:
   fVector2D() = default;
   fVector2D(float x, float y) : x_(x), y_(y) {}
+
+  friend fVector2D operator+(const fVector2D& v1, const fVector2D& v2); // gives access to private members
+  bool operator==(const fVector2D& new_vec) const;
 
 private:
   float x_;

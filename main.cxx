@@ -4,10 +4,37 @@
  * */
 
 #include "as1.hpp"
+#include "as2.hpp"
+#include "as3.hpp"
 #include <iostream>
+
 
 int main() { 
   // Example for as1.0
   homework::printHello();
+
+
+  // example for as1.4
+
+  int number = homework::factorial(3);
+  std::cout << number << std::endl;
+
+
+  // Example for as2.1
+  homework::Foo foo{};
+  std::cout << foo.bar() << std::endl;
+  
+
+  std::cout << foo.baz() << std::endl;
+
+    for (double value : foo.quux()) {
+        std::cout << value << " ";
+    }
+
+    std::cout << std::endl;
+
+
+
 }
+
 

@@ -10,7 +10,9 @@ void printHello();
 
 // As 1.1 (Reference/indirection) function that takes the address of an int and returns the
 // original value plus one 
-// TO DO: implement the function "AddOneRef"
+// TO DO: implement the function "AddOneRef"'
+
+// changing to int so that we can return an int value. Void doesn't return anything...
 void AddOneRef(int &x);
 
 // As 1.2 (Function declarators) check if number is odd. Return true if odd, false if even
