@@ -12,20 +12,51 @@ namespace homework {
 // red, green, yellow: make sure to use lower case letters for the colors
 
 
-enum class Color {
-    red,
+
+
+
+enum Color {
+    red, 
     green, 
     yellow
 };
-
 // (b) TO DO: Implement a class called "Fruit" that has a constructor taking a
 // string and a "Color" and two methods: "getName" and "getColor" Also implement
 // a pure virtual method "getTaste" that returns a string
+
+
+class Fruit {
+public:
+
+    Fruit(const std::string& name, Color color); // constructor 
+
+    Color getColor() const;
+    std::string getName() const; 
+
+    virtual std::string getTaste() const;
+    
+private:
+    Color color_;
+    std::string name_;
+
+
+};
+
+
 
 // (c) TO DO: Implement a class called "Apple" that inherits from "Fruit"
 // implement the constructor and the "getTaste" method
 // The taste of an apple is "sweet"
 // The constructor should take a "Color" as argument and pass the name "apple"
 // to the base class constructor
+
+class Apple : public Fruit {
+public:
+    Apple(Color color);
+
+    std::string getTaste() const override;
+
+};
+
 
 } // namespace homework
