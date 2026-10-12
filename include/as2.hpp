@@ -29,6 +29,7 @@ public:
   fVector2D() = default;
   fVector2D(float x, float y) : x_(x), y_(y) {}
 
+  friend fVector2D operator+(const fVector2D& v1, const fVector2D& v2); // gives access to private members
 
 
 private:
