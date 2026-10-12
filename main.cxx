@@ -7,6 +7,7 @@
 #include "as2.hpp"
 #include <iostream>
 
+
 int main() { 
   // Example for as1.0
   homework::printHello();
@@ -23,12 +24,13 @@ int main() {
   std::cout << foo.bar() << std::endl;
   
 
-
-  // Example for as2.1
   std::cout << foo.baz() << std::endl;
-  std::cout << foo.x << std::endl;
 
+    for (double value : foo.quux()) {
+        std::cout << value << " ";
+    }
 
+    std::cout << std::endl;
 
 }
 

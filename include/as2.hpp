@@ -29,6 +29,8 @@ public:
   fVector2D() = default;
   fVector2D(float x, float y) : x_(x), y_(y) {}
 
+
+
 private:
   float x_;
   float y_;
