@@ -30,7 +30,7 @@ public:
   fVector2D(float x, float y) : x_(x), y_(y) {}
 
   friend fVector2D operator+(const fVector2D& v1, const fVector2D& v2); // gives access to private members
-
+  bool operator==(const fVector2D& new_vec) const;
 
 private:
   float x_;
