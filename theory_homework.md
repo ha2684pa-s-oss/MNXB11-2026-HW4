@@ -35,12 +35,32 @@ int main() {
 }
 ```
 
+The variable `j` is destroyed more or less directly since it is created inside an inner block. It doesn't exist outside that block.
 
+Next, `number_on_heap` is deleted. Since the command is `delete number_on_heap`, the integer value 3 is deleted/destroyed but I am pretty sure the pointer is still active until the end of `main()`?
+
+Here, I got a bit stuck despite having looked back at the lecture notes and cpp references. So I asked ChatGPT to walk me through this last part, making sure I understood it. Because intuitively I'd suppose the rest of the objects are destroyed at the end of `main()` but I wasn't sure in what order or how to tell if objects aren't destroyed. 
+
+From my understanding (with help of ChatGPT), the remaining local variables are destroyed in reverse order of construction. So `leaked_string` first (the pointer variable, not dynamically allocated string), then the `number_on_heap` pointer variable and lastly the integer variable `i`. 
+
+I'd suppose that means that the dynamically allocated string "part" of `leaked_string` is never explicitly being destroyed. Since there is no `delete leaked_string` in the code. 
 
 
 ## 3. Given a source file called homework.cxx. What command would you run to
 ### 1. Compile it into an object file called homework.o, with warnings enabled
+
+```bash
+g++ main.cxx -c -Wall -Wextra -Werror
+```
+
+The `-c` flag ensures compilation but without linking. 
+
+
 ### 2. Compile it and link it into an executable called homework, with warnings enabled
+```bash
+g++ main.cxx -o homework -Wall -Wextra -Werror
+```
+
 
 
 ## 4. What type of function is declared here? When is it invoked? 
@@ -50,5 +70,10 @@ class Circle {
     Circle(const Circle& other);
 };
 ```
+It is a copy constructor and it is invoked when a new `Circle` object is initialized from an already existing `Circle` object. Example:
 
+```c++
+Circle circle1(); // creating the first object
+Circle circle2(circle1);  // invoking copy constructor
+```
 ## 5. Explain RAII
