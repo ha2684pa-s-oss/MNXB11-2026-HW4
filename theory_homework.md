@@ -77,3 +77,5 @@ Circle circle1(); // creating the first object
 Circle circle2(circle1);  // invoking copy constructor
 ```
 ## 5. Explain RAII
+
+RAII stands for Resource Acquisition Is Initialization. It is a programming techique that removes the need to do manual resource management. Main idea is that when a new object is created, it acquires a resource (using constructor) and then when that object is destroyed, that resource is automatically released (using the object destructor). Here, I also used ChatGPT. I requested it walk me through an example explaining the steps to better understand the principles. 
